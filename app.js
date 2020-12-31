@@ -1,5 +1,3 @@
-function cl(val) { console.log(val) }
-
 let name = document.querySelector('#name')
 let header = document.querySelector('.header')
 let inputWrapper = document.querySelector('.input-wrapper')
@@ -35,14 +33,8 @@ function getName() {
   return inputVal
 }
 function showError() {
-  cl('noname')
-
   let small = document.createElement('small')
-  // let content = document.createTextNode('<u>Qeyd</u>: Zəhmət olmasa, adınızı yazın.')
   small.innerHTML = '<u>Qeyd</u>: Zəhmət olmasa, adınızı yazın.'
-  // small.appendChild(content)
   inputWrapper.appendChild(small)
-
-  cl(small)
 }
 
