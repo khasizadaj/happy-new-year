@@ -1,87 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="az">
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xəppi Neü Year</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="form-control">
-        <h1 class="header">Adınızı daxil edin</h1>
-        <div class="input-wrapper">
-          <input
-            autofocus
-            autocomplete="off"
-            placeholder="Ad yaz..."
-            type="text"
-            id="name"
-          />
-          <span class="right-arrow"
-            ><svg
-              class="w"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              ></path></svg
-          ></span>
+    <title>Yeni İlinzi Mübarək</title>
+    <meta name="description" content="Cavidin yeni il üçün ürək sözləri">
+    <link rel="stylesheet" href="./style/2022.css" />
+</head>
+
+<body>
+    <section class="section">
+        <div class="wrapper form-wrapper active">
+            <h1>JAXA-dan Məktub</h1>
+            <p>İkinci ildir ki edirəm və təbrik mesajını görmək üçün adını yaz</p>
+            <form action="" id="name-form">
+                <div class="input-wrapper">
+                    <label for="name-input">Adınız</label>
+                    <input type="text" class="name-input js-name-input" id="name-input">
+                    <small class="feedback">Adınızı əlavə etməyi unutdunuz. Əgər adınızı vermək istəmirsinizsə,
+                        aşağıda olan "Adımı yazmaq istəmirəm" düyməsinə toxunun.</small>
+                </div>
+                <button type="submit" class="button">Təbriki gör</button>
+                <a class="anonymous">> Adımı yazmaq istəmirəm</a>
+            </form>
         </div>
+        <div class="wrapper message-wrapper">
+            <h1>Təbriklər, <span id="name-in-message">Anonim insan</span>!!!</h1>
 
-        <p class="body">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-          earum sequi, libero laudantium harum quisquam!
-        </p>
-      </div>
-    </div>
-    <script>
-      let name = document.querySelector("#name");
-      let header = document.querySelector(".header");
-      let inputWrapper = document.querySelector(".input-wrapper");
-      let body = document.querySelector(".body");
-      let rightArrow = document.querySelector(".right-arrow");
+            <p class="note">Bu mesaj əvvəldən yazılıb deyə hamıya sən deyə müraciət edəcəm.</p>
+            <br>
+            <p>Bu il üçün sənə arzu edirəm ki, ətrafdakıların təsiri olan olan yox, məhz ös istədiyin azuların və
+                hədəflərin dalınca qaçasan. Ən əsası doğru və məhz sənə uyğun olanlarının arxasınca.</p>
+            <p>Ümid edirəm yanında hər zaman səni dəstəkləyən, yeniliyə açıq və hər zaman səni inkişafa aparan ("əziz
+                babamız" kimi) insanlar olsun.</p>
+            <p>Yetərincə klişe arzular qoyduğum üçün artıq bu məktubu bitirə bilərəm. Yeni ilin mübarək. Sevilirsən!</p>
+            <br>
+            <p>Macarıstandan ürək dolusu salamlarla, <span class="signature">Cavid "JAXA" Xasizadə.</span></p>
 
-      rightArrow.addEventListener("click", () => {
-        let name = getName();
+            <button type="submit" class="button share-button">Dostlarınla bölüş</button>
+        </div>
+        <footer>
+            <a href="./2021.html">> Keçən ilki təbrikə bax</a>
+            <a href="https://www.javidkhasizada.xyz" target="_blank">> Bloquma bax</a>
+            <a href="https://www.portfolio.javidkhasizada.xyz" target="_blank">> GitHuba bax</a>
+        </footer>
+    </section>
+    <script src="/js/2022.js"></script>
+</body>
 
-        if (name == "") {
-          showError();
-          return 1;
-        } else {
-          body.innerHTML = `<p>Salam, ${name}. Bu mesaj əvvəldən yazılıb deyə hamıya sən deyə müraciət 
-    edəcəm.</p></br><p>Bu il hər birimiz üçün çox çətin keçdiyini deməyə belə ehtiyac yoxdur. 
-    Ümid edirəm ki, bununla belə bir çox arzuna çata bilibsən. Sənə qarşıdan gələn yeni ildə 
-    xoş günlər arzulayıram desəm çox klişe olar :) Yeni iliniz kimi düşüncələriniz və etdikləriniz
-    də yeni olsun və keçən ildə "kaş ki" dediyiniz işləri edə biləsiz.</p>
-    </br>
-    <p>Bir də özəl günü və ya özəl nəyisə gözləmədən yaşa. Çünki sən artıq özəlsən.</p>
-    </br>
-    <p>Cavid "JAXA" Xasizadə</p>`;
-        }
-
-        header.classList.add("name-added");
-        inputWrapper.classList.add("name-added");
-
-        body.classList.add("is-visible");
-        body.classList.add("name-added");
-      });
-
-      function getName() {
-        let inputVal = inputWrapper.querySelector("#name").value;
-        return inputVal;
-      }
-      function showError() {
-        let small = document.createElement("small");
-        small.innerHTML = "<u>Qeyd</u>: Zəhmət olmasa, adınızı yazın.";
-        inputWrapper.appendChild(small);
-      }
-    </script>
-  </body>
 </html>
