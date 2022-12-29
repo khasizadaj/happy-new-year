@@ -33,6 +33,7 @@ a {
   text-decoration: none;
   color: var(--yellow);
 }
+
 a:hover {
   text-decoration: underline;
   cursor: pointer;
@@ -55,6 +56,7 @@ p {
   color: var(--white-dimmed);
   content: "Qeyd: ";
 }
+
 .signature {
   font-style: italic;
 }
@@ -72,12 +74,15 @@ p {
   width: 80%;
   margin-bottom: 4rem;
 }
+
 .form-wrapper {
   display: none;
 }
+
 .message-wrapper {
   display: none;
 }
+
 .wrapper.active {
   display: block;
 }
@@ -157,6 +162,7 @@ input:focus {
     text-decoration: none;
     color: var(--yellow);
   }
+
   a:hover {
     text-decoration: underline;
     cursor: pointer;
@@ -179,6 +185,7 @@ input:focus {
     color: var(--white-dimmed);
     content: "Qeyd: ";
   }
+
   .signature {
     font-style: italic;
   }
@@ -217,6 +224,7 @@ input:focus {
     font-size: 1.6rem;
     padding: 0.8rem;
   }
+
   footer {
     display: flex;
     flex-direction: column;

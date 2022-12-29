@@ -1,0 +1,78 @@
+:root {
+    --red: #b10015;
+    --red-dimmed: rgba(177, 0, 21, 0.7);
+    --red-darker: rgb(99, 11, 21);
+    --white: #e6efec;
+    --white-dimmed: rgba(230, 239, 236, 0.8);
+    --yellow: #edc85e;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    padding-block: 1rem 0.5rem;
+    border-bottom: 2px solid var(--white-dimmed);
+    margin-bottom: 2rem;
+}
+
+
+
+h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-block: 0.5rem;
+    border-bottom: 2px solid var(--white-dimmed);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 20vh;
+}
+
+.section-navbar {
+    padding-block: 5vh;
+}
+
+.section-form {
+    padding-top: 0vh;
+}
+
+.wrapper {
+    max-width: 600px;
+    width: 80%;
+    margin-bottom: 4rem;
+}
+
+.wrapper-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.language {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    height: 35px;
+    border: 2px solid var(--white);
+}
+
+.language-option {
+    font-size: 1.5rem;
+    line-height: 35px;
+    text-align: center;
+    width: 35px;
+    height: inherit;
+    color: var(--white-dimmed);
+    margin: -1px;
+    cursor: pointer;
+}
+
+.language-option.active {
+    background-color: var(--white);
+    color: var(--red);
+}
