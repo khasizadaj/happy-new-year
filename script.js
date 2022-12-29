@@ -35,3 +35,39 @@ share_button.addEventListener("click", (event) => {
     navigator.clipboard.writeText(url);
     alert("Səhifənin linki kopyalandı. İndi dostlarına göndərə bilərsən!");
 })
+
+// LANGUAGE SWITCHING
+const baseUrl = window.location.host;
+let urlToEnglish;
+if (baseUrl.includes("github.io")) {
+    urlToEnglish = "https://khasizadaj.github.io/happy_new-year/en.html"
+    urlToAzerbaijani = "https://khasizadaj.github.io/happy_new-year"
+} else {
+    urlToEnglish = "http://127.0.0.1:5500/en.html"
+    urlToAzerbaijani = "http://127.0.0.1:5500/index.html"
+}
+
+console.log(baseUrl)
+console.log(urlToEnglish)
+console.log(urlToAzerbaijani)
+
+const languages = document.querySelectorAll(".language-option");
+languages.forEach((languageOption) => {
+    languageOption.addEventListener("click", () => {
+        let languageWillChange = false;
+        if (languageOption.classList.contains("active")) {
+            console.log(`Language is already ${languageOption.innerText}.`)
+        } else {
+            console.log(`Language has changed to ${languageOption.innerText}.`)
+            languageWillChange = true;
+        }
+
+        if (languageWillChange) {
+            if (languageOption.innerText == "EN") {
+                window.location.href = urlToEnglish;
+            } else {
+                window.location.href = urlToAzerbaijani;
+            }
+        }
+    })
+})
