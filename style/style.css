@@ -25,6 +25,14 @@ h3 {
     border-bottom: 2px solid var(--white-dimmed);
 }
 
+h4 {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-block: 0.5rem;
+    border-bottom: 2px solid var(--white-dimmed);
+}
+
 .section {
     display: flex;
     flex-direction: column;
@@ -83,4 +91,59 @@ hr {
     width: 100%;
     color: var(--white-dimmed);
 
+}
+
+.button-wide {
+    width: 100%;
+}
+
+.button.share {
+    margin-top: 2rem;
+}
+
+/* SONG */
+.submitted_songs-section {
+    padding-block-start: 10vh;
+    min-height: 400px;
+}
+
+#submitted_songs {
+    padding-block: 2rem;
+}
+
+.song {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    height: auto;
+    padding-block: 0.5rem;
+    min-height: 60px;
+
+}
+
+.song-name {
+    margin-right: 1rem;
+    border: none;
+}
+
+.song-artist {
+    border: none;
+    padding: 0;
+}
+
+.song-artist::before {
+    content: "by";
+    margin-right: 1rem;
+    color: var(--white-dimmed);
+}
+
+.actions {
+    max-width: 200px;
+}
+
+.actions>a {
+    margin-right: 0;
 }

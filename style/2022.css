@@ -28,10 +28,17 @@ body {
 }
 
 a {
-  font-size: 1.5rem;
-  margin-right: 1rem;
+  font-size: inherit;
+}
+
+.link {
   text-decoration: none;
   color: var(--yellow);
+}
+
+.footer-link {
+  font-size: 1.5rem;
+  margin-right: 1rem;
 }
 
 a:hover {
@@ -139,7 +146,6 @@ input:focus {
   border: none;
   border-radius: 4px;
   font-size: 1.8rem;
-  width: 100%;
   padding: 1rem;
   color: var(--red);
   font-family: inherit;
@@ -147,9 +153,11 @@ input:focus {
 
 .share-button {
   margin-top: 2rem;
+  width: 100%;
 }
 
 .anonymous {
+  font-size: 1.5rem;
   margin-top: 2rem;
   display: block;
   text-align: center;

@@ -35,8 +35,8 @@
                     <small class="feedback">Adınızı əlavə etməyi unutdunuz. Əgər adınızı vermək istəmirsinizsə,
                         aşağıda olan "Adımı yazmaq istəmirəm" düyməsinə klikə.</small>
                 </div>
-                <button type="submit" class="button">Təbriki gör</button>
-                <a class="anonymous">> Adımı yazmaq istəmirəm</a>
+                <button type="submit" class="button button-wide">Təbriki gör</button>
+                <a class="anonymous link">> Adımı yazmaq istəmirəm</a>
             </form>
         </div>
     </section>
@@ -55,22 +55,28 @@
             <br>
             <p>Macarıstandan ürək dolusu salamlarla, <span class="signature">Cavid "JAXA" Xasizadə.</span></p>
 
-            <button type="submit" class="button share-button">Dostlarınla bölüş</button>
+            <button class="button button-wide share">Dostlarınla bölüş</button>
         </div>
     </section>
 
     <!-- SUBMITTED SONGS BY PEOPLE -->
     <section class="section submitted_songs-section">
-        <div class="wrapper submitted_songs-wrapper" id="submitted_songs">
-            <h3 class="heading">Songs of the year by you!</h3>
+        <div class="wrapper submitted_songs-wrapper">
+            <h1 class="heading">Songs of the year (by you!)</h1>
+            <p>You can submit song of the year for you. You can see submissions of other people down below.</p>
+            <p class="note">If you have missed it, you can add it <a class="link" href="./submit_song.html">from
+                    here.</a></p>
             <!-- SONGS WILL BE FILLED IN VIA JS -->
+            <div id="submitted_songs">
+            </div>
         </div>
     </section>
+
     <section class="section section-footer">
         <footer>
-            <a href="./2021.html">> Keçən ilki təbrikə bax</a>
-            <a href="https://www.javidkhasizada.xyz" target="_blank">> Bloqa bax</a>
-            <a href="https://github.com/khasizadaj" target="_blank">> GitHuba bax</a>
+            <a class="link footer-link" href="./2021.html">> Old version</a>
+            <a class="link footer-link" href="https://www.javidkhasizada.xyz" target="_blank">> Blog</a>
+            <a class="link footer-link" href="https://github.com/khasizadaj" target="_blank">> GitHub</a>
         </footer>
     </section>
     <script src="script.js"></script>

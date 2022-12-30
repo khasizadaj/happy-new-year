@@ -37,27 +37,34 @@ async function setData(data) {
 
 function createSongElement(song) {
     let songDiv = document.createElement('div');
-    songDiv.classList.add("song", "wrapper");
+    songDiv.classList.add("song");
 
     let name = document.createElement('h3');
     name.textContent = song.name;
-    name.classList.add("song", "name");
+    name.classList.add("song-name");
 
-    let artist = document.createElement('h4');
+    let artist = document.createElement('h3');
     artist.textContent = song.artist;
-    artist.classList.add("song", "artist");
+    artist.classList.add("song-artist");
 
     let link = document.createElement('a');
     let linkButton = document.createElement('button');
     linkButton.textContent = "Go to music";
-    linkButton.classList.add("song", "link-btn");
+    linkButton.classList.add("song-link", "button");
     link.appendChild(linkButton);
     link.href = song.link
-    link.target = "_blank"
+    link.target = "_blank";
 
-    songDiv.appendChild(name);
-    songDiv.appendChild(artist);
-    songDiv.appendChild(link);
+    let details = document.createElement('div');
+    details.classList.add("details");
+    let actions = document.createElement('div');
+    actions.classList.add("actions");
+
+    details.appendChild(name);
+    details.appendChild(artist);
+    actions.appendChild(link);
+    songDiv.append(details);
+    songDiv.append(actions);
     return songDiv;
 }
 

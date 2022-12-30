@@ -27,7 +27,7 @@ anonymous.addEventListener("click", (event) => {
     message_wrapper.classList.add("active");
 })
 
-const share_button = document.querySelector(".share-button");
+const share_button = document.querySelector(".share");
 
 share_button.addEventListener("click", (event) => {
     let url = window.location.href;
