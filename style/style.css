@@ -18,6 +18,7 @@ h1 {
 
 
 h3 {
+    display: inline-block;
     font-size: 2rem;
     font-weight: 600;
     padding-block: 0.5rem;
@@ -28,16 +29,17 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-block: 20vh;
+    padding-block: 0;
 }
 
 .section-navbar {
     padding-block: 5vh;
 }
 
-.section-form {
-    padding-top: 0vh;
+.section-footer {
+    padding-block-end: 5vh;
 }
+
 
 .wrapper {
     max-width: 600px;
@@ -75,4 +77,10 @@ h3 {
 .language-option.active {
     background-color: var(--white);
     color: var(--red);
+}
+
+hr {
+    width: 100%;
+    color: var(--white-dimmed);
+
 }
