@@ -1,7 +1,7 @@
 console.log("Happy New Year!")
 
-const form_wrapper = document.querySelector(".form-wrapper");
-const message_wrapper = document.querySelector(".message-wrapper");
+const form_wrapper = document.querySelector(".section-form");
+const message_wrapper = document.querySelector(".section-message");
 const name_in_message = document.querySelector("#name-in-message");
 
 const form = document.querySelector("form");

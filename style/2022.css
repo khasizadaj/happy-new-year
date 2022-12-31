@@ -82,13 +82,13 @@ p {
   margin-bottom: 4rem;
 }
 
-.form-wrapper {
+/* .form-wrapper {
   display: none;
-}
+} */
 
-.message-wrapper {
+/* .message-wrapper {
   display: none;
-}
+} */
 
 .wrapper.active {
   display: block;
