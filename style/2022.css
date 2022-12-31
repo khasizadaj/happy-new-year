@@ -59,9 +59,8 @@ p {
   margin-bottom: 1rem;
 }
 
-.note::before {
+.note {
   color: var(--white-dimmed);
-  content: "Qeyd: ";
 }
 
 .signature {
@@ -187,11 +186,6 @@ input:focus {
   p {
     font-size: 2rem;
     margin-bottom: 1rem;
-  }
-
-  .note::before {
-    color: var(--white-dimmed);
-    content: "Qeyd: ";
   }
 
   .signature {

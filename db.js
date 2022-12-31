@@ -1,4 +1,4 @@
-const TOKEN = "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";
+const TOKEN = "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";
 const GIST_ID = "9804bd0b00bed5f143568382158121d1";
 const GIST_FILENAME = "db.json";
 
@@ -10,8 +10,6 @@ async function getData() {
     const gist = await req.json();
     return JSON.parse(gist.files[GIST_FILENAME].content);
 }
-
-console.log(getData())
 
 /* 
 * Puts the data you want to store back into the gist
@@ -79,10 +77,96 @@ async function fill(songs) {
     });
 }
 
-let result = getData()
 
-result.then((db) => {
-    console.log(db)
-    fill(db.songs)
+
+
+
+const baseUrlDb = window.location.host;
+let urlToEnglishDb;
+let urlToAzerbaijaniDb;
+if (baseUrlDb.includes("github.io")) {
+    urlToEnglishDb = "https://khasizadaj.github.io/happy_new-year/en.html"
+    urlToAzerbaijaniDb = "https://khasizadaj.github.io/happy_new-year"
+} else {
+    urlToEnglishDb = "http://127.0.0.1:5500/en.html"
+    urlToAzerbaijaniDb = "http://127.0.0.1:5500/index.html"
+}
+
+
+
+if (!window.location.href.includes("submit_song")) {
+    let result = getData()
+    result.then((db) => {
+        console.log(db)
+        fill(db.songs)
+    })
+}
+
+const songForm = document.querySelector("form");
+songForm.addEventListener("submit", (event) => {
+    event.preventDefault()
+
+    let songName = document.querySelector(".js-song_name-input").value;
+    let songArtist = document.querySelector(".js-song_artist-input").value;
+    let songLink = document.querySelector(".js-song_link-input").value;
+
+    let songNameIsValid = false;
+    let feedbackSongName = document.querySelector(".feedback-song_name");
+
+    if (songName == "") {
+        feedbackSongName.classList.add("error");
+        feedbackSongName.classList.add("active");
+        songNameIsValid = false;
+    } else {
+        feedbackSongName.classList.remove("error");
+        feedbackSongName.classList.remove("active");
+        songNameIsValid = true;
+    }
+
+    let songArtistIsValid = false;
+    let feedbackSongArtist = document.querySelector(".feedback-song_artist");
+
+    if (songArtist == "") {
+        feedbackSongArtist.classList.add("error");
+        feedbackSongArtist.classList.add("active");
+        songArtistIsValid = false;
+    } else {
+        feedbackSongArtist.classList.remove("error");
+        feedbackSongArtist.classList.remove("active");
+        songArtistIsValid = true;
+    }
+
+    let songLinkIsValid = false;
+    let feedbackSongLink = document.querySelector(".feedback-song_link");
+
+    if (songLink == "") {
+        feedbackSongLink.classList.add("error");
+        feedbackSongLink.classList.add("active");
+        songLinkIsValid = false;
+    } else {
+        feedbackSongLink.classList.remove("error");
+        feedbackSongLink.classList.remove("active");
+        songLinkIsValid = true;
+    }
+
+    if (songNameIsValid && songArtistIsValid && songLinkIsValid) {
+        let result = getData();
+        result.then((db) => {
+            console.log(db)
+            let newSong = {
+                "artist": songArtist,
+                "name": songName,
+                "link": songLink
+            }
+            db.songs.push(newSong);
+            setData(db)
+            console.log(result)
+            // setData(data);
+            if (window.location.href.includes("en")) {
+                window.location.href = `${urlToEnglishDb}#section-submitted_songs`;
+            } else {
+                window.location.href = `${urlToAzerbaijaniDb}#section-submitted_songs`;
+            }
+        })
+    }
 })
-

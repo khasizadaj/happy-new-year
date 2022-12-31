@@ -7,6 +7,10 @@
     --yellow: #edc85e;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1 {
     font-size: 3rem;
     font-weight: 600;
@@ -49,12 +53,11 @@ h4 {
 }
 
 .section-form {
-    height: 80vh;
     display: none;
 }
 
 .section-form.active {
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
 }
 
