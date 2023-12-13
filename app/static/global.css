@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600&display=swap');
+
+:root {
+	--red: #b10015;
+	--red-dimmed: rgba(177, 0, 21, 0.7);
+	--red-darker: rgb(99, 11, 21);
+	--white: #e6efec;
+	--white-dimmed: rgba(230, 239, 236, 0.8);
+	--yellow: #edc85e;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Dosis', 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+	font-weight: 500;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	color: var(--white);
+}
+
+body {
+	overflow-x: hidden;
+	width: 100%;
+	background-color: var(--red);
+}
+
+a {
+	font-size: inherit;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: 600;
+	padding-block: 1rem 0.5rem;
+	border-bottom: 2px solid var(--white-dimmed);
+	margin-bottom: 2rem;
+}
+
+h3 {
+	display: inline-block;
+	font-size: 2rem;
+	font-weight: 600;
+	padding-block: 0.5rem;
+	border-bottom: 2px solid var(--white-dimmed);
+}
+
+h4 {
+	display: inline-block;
+	font-size: 1.5rem;
+	font-weight: 500;
+	padding-block: 0.5rem;
+	border-bottom: 2px solid var(--white-dimmed);
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	font-weight: inherit;
+	font-family: inherit;
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-block: 0;
+}
+
+.wrapper {
+	max-width: 600px;
+	width: 80%;
+	margin-bottom: 4rem;
+}
