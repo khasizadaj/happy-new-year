@@ -1,7 +1,7 @@
 <script>
 	let language = "en";
 
-	import Navbar from './Navbar.svelte';
+	import Navbar from '$lib/components/Navbar.svelte';
 </script>
 
 <Navbar language={language}/>
