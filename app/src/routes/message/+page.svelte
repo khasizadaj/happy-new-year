@@ -2,7 +2,6 @@
 	import { language } from '$lib/stores.js';
 
 	import Navbar from '$lib/components/Navbar.svelte';
-	import WishForm from '$lib/components/WishForm.svelte';
 
 	let languageValue: string;
 
@@ -11,6 +10,4 @@
 	});
 </script>
 
-
 <Navbar languageValue={languageValue}/>
-<WishForm languageValue={languageValue}/>

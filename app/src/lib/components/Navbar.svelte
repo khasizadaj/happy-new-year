@@ -1,11 +1,12 @@
 <script lang="ts">
-	export let language: string;
+	import { language } from '$lib/stores.js';
+	export let languageValue: string;
 
 	const changeLanguage = (lang: string) => {
-		if (lang === 'az') {
-			language = 'az';
+		if (lang === "az") {
+			language.update((value) => value = "az");
 		} else {
-			language = 'en';
+			language.update((value) => value = "en");
 		}
 	};
 </script>
@@ -13,14 +14,14 @@
 <section class="section section-navbar">
 	<div class="wrapper wrapper-navbar">
 		<div class="logo">
-			{#if language === 'en'}
+			{#if languageValue === 'en'}
 				<h3>Letter from JAXA</h3>
 			{:else}
 				<h3>JAXA-dan Məktub</h3>
 			{/if}
 		</div>
 		<div class="language">
-			{#if language === 'en'}
+			{#if languageValue === 'en'}
 				<button type="button" on:click={() => changeLanguage('en')} class="language-option active"
 					>EN</button
 				>
