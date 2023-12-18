@@ -119,17 +119,6 @@ input:focus {
 	background-color: rgba(67, 67, 67, 0.12);
 }
 
-.feedback {
-	display: none;
-	padding-top: 1rem;
-	font-size: 1.5rem;
-	color: var(-white);
-}
-
-.feedback.active {
-	display: block;
-}
-
 .button {
 	background-color: var(--white);
 	font-weight: 700;

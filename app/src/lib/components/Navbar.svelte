@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { language } from '$lib/stores.js';
+	import { STATE } from '$lib/stores.js';
 	export let languageValue: string;
 
 	const changeLanguage = (lang: string) => {
 		if (lang === "az") {
-			language.update((value) => value = "az");
+			STATE.update((value) => ({ ...value, language: "az" }));
 		} else {
-			language.update((value) => value = "en");
+			STATE.update((value) => ({ ...value, language: "en" }));
 		}
 	};
 </script>

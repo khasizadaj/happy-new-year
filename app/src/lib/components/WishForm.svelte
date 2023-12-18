@@ -1,16 +1,25 @@
 <script lang="ts">
+	import { STATE } from '$lib/stores.js';
 	export let languageValue: string;
 
-	export const actions = {
-		default: async () => {
-			const nameInput = document.getElementById('name-input') as HTMLInputElement;
-			const name = nameInput.value;
-			if (name.length !== 0) {
-				window.location.href = `/message?name=${name}`;
-			} else {
-				window.location.href = `/message`;
-			}
+	const handleFormWithName = async (event) => {
+		event.preventDefault();
+		const formData = new FormData(event.target);
+
+		if (!formData.get('name')) {
+			let feedback = document.querySelector('.feedback') as HTMLElement;
+			feedback.style.display = 'block';
+			return;
 		}
+
+		let nameValue = formData.get('name');
+		STATE.update((currentValue) => ({
+			...currentValue,
+			name: {
+				...currentValue.name,
+				value: (nameValue || '').toString()
+			}
+		}));
 	};
 </script>
 
@@ -26,19 +35,17 @@
 				<span class="note">Note: </span>If you don't want to add your name, click on
 				<i>"I don't wanna add my name"</i>.
 			</p>
-			<form id="name-form">
+			<form method="POST" on:submit|preventDefault={handleFormWithName} id="name-form">
 				<div class="input-wrapper">
 					<label for="name-input">Your name</label>
-					<input type="text" class="name-input js-name-input" id="name-input" />
+					<input type="text" class="name-input js-name-input" name="name" id="name-input" />
 					<small class="feedback">
 						You forgot to add your name. If you don't want to add your name, click on
 						<i>"I don't wanna add my name"</i>.
 					</small>
 				</div>
-				<button type="submit" on:click={actions.default} class="button button-wide"
-					>See JAXA's message</button
-				>
-				<button type="submit" on:click={actions.default} class="anonymous link"
+				<button type="submit" class="button button-wide">See JAXA's message</button>
+				<button type="submit" formaction="?/anonymous" class="anonymous link"
 					>> I don't wanna add my name</button
 				>
 			</form>
@@ -51,7 +58,7 @@
 				<span class="note">Qeyd: </span>Adını əlavə et və "Təbriki gör" düyməsinə kliklə. Əgər adını
 				əlavə etmək istəmirsənsə, <i>"Adımı yazmaq istəmirəm"</i> düyməsinə klikləyə bilərsən.
 			</p>
-			<form action="" id="name-form">
+			<form action="?/named" id="name-form" method="post">
 				<div class="input-wrapper">
 					<label for="name-input">Ad</label>
 					<input type="text" class="name-input js-name-input" id="name-input" />
@@ -60,10 +67,8 @@
 						yazmaq istəmirəm" düyməsinə klikə.
 					</small>
 				</div>
-				<button type="submit" on:click={actions.default} class="button button-wide"
-					>Təbriki gör</button
-				>
-				<button type="submit" on:click={actions.default} class="anonymous link"
+				<button type="submit" class="button button-wide">Təbriki gör</button>
+				<button type="submit" formaction="?/anonymous" class="anonymous link"
 					>> Adımı yazmaq istəmirəm</button
 				>
 			</form>
@@ -105,9 +110,5 @@
 		padding-top: 1rem;
 		font-size: 1.5rem;
 		color: var(-white);
-	}
-
-	.feedback.active {
-		display: block;
 	}
 </style>
