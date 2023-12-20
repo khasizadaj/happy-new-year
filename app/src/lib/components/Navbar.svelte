@@ -15,9 +15,9 @@
 	<div class="wrapper wrapper-navbar">
 		<div class="logo">
 			{#if languageValue === 'en'}
-				<h3>Letter from JAXA</h3>
+				<h3>Letter from JAXA / 2023</h3>
 			{:else}
-				<h3>JAXA-dan Məktub</h3>
+				<h3>JAXA-dan Məktub / 2023</h3>
 			{/if}
 		</div>
 		<div class="language">

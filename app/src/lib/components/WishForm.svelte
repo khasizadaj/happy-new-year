@@ -2,9 +2,16 @@
 	import { STATE } from '$lib/stores.js';
 	export let languageValue: string;
 
-	const handleFormWithName = async (event) => {
-		event.preventDefault();
-		const formData = new FormData(event.target);
+	const handleForm = (event, anonymous=false) => {
+		if (anonymous) {
+			STATE.update((currentValue) => ({
+				...currentValue,
+				formIsFilled: true
+			}));
+			return;
+		}
+
+		const formData = new FormData(event.target.parentNode);
 
 		if (!formData.get('name')) {
 			let feedback = document.querySelector('.feedback') as HTMLElement;
@@ -15,6 +22,7 @@
 		let nameValue = formData.get('name');
 		STATE.update((currentValue) => ({
 			...currentValue,
+			formIsFilled: true,
 			name: {
 				...currentValue.name,
 				value: (nameValue || '').toString()
@@ -23,7 +31,7 @@
 	};
 </script>
 
-<section class="section section-form active">
+<section class="section section-form">
 	<div class="wrapper form-wrapper">
 		{#if languageValue === 'en'}
 			<p>
@@ -35,7 +43,7 @@
 				<span class="note">Note: </span>If you don't want to add your name, click on
 				<i>"I don't wanna add my name"</i>.
 			</p>
-			<form method="POST" on:submit|preventDefault={handleFormWithName} id="name-form">
+			<form id="name-form">
 				<div class="input-wrapper">
 					<label for="name-input">Your name</label>
 					<input type="text" class="name-input js-name-input" name="name" id="name-input" />
@@ -44,9 +52,13 @@
 						<i>"I don't wanna add my name"</i>.
 					</small>
 				</div>
-				<button type="submit" class="button button-wide">See JAXA's message</button>
-				<button type="submit" formaction="?/anonymous" class="anonymous link"
-					>> I don't wanna add my name</button
+				<button type="submit" on:click|preventDefault={(e) => handleForm(e)} class="button button-wide"
+					>See JAXA's message</button
+				>
+				<button
+					type="submit"
+					on:click|preventDefault={(e) => handleForm(e, true)}
+					class="button-ghost anonymous link">> I don't wanna add my name</button
 				>
 			</form>
 		{:else}
@@ -58,17 +70,19 @@
 				<span class="note">Qeyd: </span>Adını əlavə et və "Təbriki gör" düyməsinə kliklə. Əgər adını
 				əlavə etmək istəmirsənsə, <i>"Adımı yazmaq istəmirəm"</i> düyməsinə klikləyə bilərsən.
 			</p>
-			<form action="?/named" id="name-form" method="post">
+			<form id="name-form">
 				<div class="input-wrapper">
 					<label for="name-input">Ad</label>
-					<input type="text" class="name-input js-name-input" id="name-input" />
+					<input type="text" class="name-input js-name-input" name="name" id="name-input" />
 					<small class="feedback">
 						Adınızı əlavə etməyi unutdunuz. Əgər adınızı vermək istəmirsinizsə, aşağıda olan "Adımı
 						yazmaq istəmirəm" düyməsinə klikə.
 					</small>
 				</div>
-				<button type="submit" class="button button-wide">Təbriki gör</button>
-				<button type="submit" formaction="?/anonymous" class="anonymous link"
+				<button type="submit" on:click|preventDefault={(e) => handleForm(e)} class="button button-wide"
+					>Təbriki gör</button
+				>
+				<button type="submit" on:click|preventDefault={(e) => handleForm(e, true)} class="button button-ghost anonymous link"
 					>> Adımı yazmaq istəmirəm</button
 				>
 			</form>
@@ -78,16 +92,8 @@
 
 <style>
 	.section-form {
-		display: none;
-	}
-
-	.section-form.active {
 		min-height: 80vh;
 		display: flex;
-	}
-
-	.button-wide {
-		width: 100%;
 	}
 
 	.anonymous {

@@ -70,7 +70,11 @@ p {
 
 form {
 	margin-block: 2rem;
-  }
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
 button {
 	border: none;
@@ -102,6 +106,7 @@ label {
 
 .input-wrapper {
 	margin-bottom: 1.5rem;
+	width: 100%;
 }
 
 input {
@@ -130,57 +135,74 @@ input:focus {
 	font-family: inherit;
 }
 
+.button-ghost {
+	background-color: transparent;
+	border: none;
+	padding: 1rem;
+	color: var(--white);
+}
+
+.button-wide {
+	width: 100%;
+}
+
+.link {
+	text-decoration: underline;
+	color: var(--yellow);
+	cursor: pointer;
+}
+
 @media screen and (max-width: 400px) {
 	a {
 		font-size: 1.5rem;
 		margin-right: 1rem;
 		text-decoration: none;
 		color: var(--yellow);
-	  }
-	
-	  a:hover {
+	}
+
+	a:hover {
 		text-decoration: underline;
 		cursor: pointer;
-	  }
-	
-	  h1 {
+	}
+
+	h1 {
 		font-size: 3rem;
 		font-weight: 600;
 		padding-block: 1rem 0.5rem;
 		border-bottom: 2px solid var(--white-dimmed);
 		margin-bottom: 2rem;
-	  }
-	
-	  p {
+	}
+
+	p {
 		font-size: 2rem;
 		margin-bottom: 1rem;
-	  }
-		
-	  .section {
+	}
+
+	.section {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		padding-block: 20vh;
-	  }
-	
-	  .wrapper {
+	}
+
+	.wrapper {
 		max-width: 500px;
 		width: 80%;
 		margin-bottom: 4rem;
-	  }
-	
-	  label {
+	}
+
+	label {
 		display: block;
 		margin-bottom: 0.8rem;
 		font-size: 1.8rem;
-	  }
-	
-	  input {
-		font-size: 1.8rem;
-	  }
+	}
 
-	  .button {
+	input {
+		font-size: 1.8rem;
+	}
+
+	.button {
 		font-size: 1.6rem;
 		padding: 0.8rem;
-	  }
+	}
 }
