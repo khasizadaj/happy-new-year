@@ -5,11 +5,11 @@
 
 	let nameValue: string;
 
-	const unsubscribe = STATE.subscribe((data) => {
+	STATE.subscribe((data) => {
 		nameValue =
 			data.name.value.length > 0
 				? data.name.value
-				: data.name.default[languageValue as keyof typeof data.name.default];
+				: data.name.default[data.language as keyof typeof data.name.default];
 	});
 </script>
 
