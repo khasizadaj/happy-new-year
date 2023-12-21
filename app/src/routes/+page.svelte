@@ -6,6 +6,7 @@
 	import SongCTA from '$lib/components/SongCTA.svelte';
 	import SubmittedSongs from '$lib/components/SubmittedSongs.svelte';
 	import WishForm from '$lib/components/WishForm.svelte';
+	import Footer from '../lib/components/Footer.svelte';
 
 	let languageValue: string;
 	let nameValue: string;
@@ -23,10 +24,12 @@
 
 <Navbar {languageValue} />
 
-{#if formIsFilledValue === false }
+{#if formIsFilledValue === false}
 	<WishForm {languageValue} />
 {:else}
 	<Message {languageValue} />
-	<SongCTA {languageValue}/>
-	<SubmittedSongs {languageValue}/>
+	<SongCTA {languageValue} />
+	<SubmittedSongs {languageValue} />
 {/if}
+
+<Footer {languageValue} />
