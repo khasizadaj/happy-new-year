@@ -67,7 +67,9 @@
 
 <style>
 	.section-message {
-		min-height: 80vh;
+		padding-block: 5rem;
+		height: 90vh;
+		min-height: 500px;
 		display: flex;
 	}
 

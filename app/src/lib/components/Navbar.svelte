@@ -42,10 +42,8 @@
 
 <style>
 	.section-navbar {
-		height: 100%;
-		min-height: 8vh;
-		max-height: 10vh;
-		margin-block: 5vh;
+		height: 10vh;
+		min-height: 70px;
 	}
 
 	.section-navbar > .wrapper {

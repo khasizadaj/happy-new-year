@@ -43,7 +43,6 @@
 
 <style>
 	.section-songs {
-		/* min-height: 80vh; */
 		display: flex;
 	}
 

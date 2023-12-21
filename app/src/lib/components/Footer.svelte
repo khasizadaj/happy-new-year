@@ -29,7 +29,8 @@
 		font-size: 1.5rem;
 	}
 	.section-footer {
-		margin-block-end: 5vh;
+		height: 10vh;
+		min-height: 50px;
 	}
 	@media screen and (max-width: 400px) {
 		footer {

@@ -94,7 +94,6 @@ button {
 .wrapper {
 	max-width: 600px;
 	width: 80%;
-	margin-bottom: 4rem;
 }
 
 label {
@@ -188,7 +187,6 @@ input:focus {
 	.wrapper {
 		max-width: 500px;
 		width: 80%;
-		margin-bottom: 4rem;
 	}
 
 	label {
