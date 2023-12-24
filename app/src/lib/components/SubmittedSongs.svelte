@@ -1,5 +1,39 @@
 <script lang="ts">
+	class Song {
+		name: string;
+		artist: string;
+		url: string;
+		platform: string;
+		shared_by: string;
+		id: number;
+		links: {
+			self: {
+				href: string;
+			};
+			type: string;
+		};
+
+		constructor(
+			name: string,
+			artist: string,
+			url: string,
+			platform: string,
+			shared_by: string,
+			id: number,
+			links: { self: { href: string }; type: string }
+		) {
+			this.name = name;
+			this.artist = artist;
+			this.url = url;
+			this.platform = platform;
+			this.shared_by = shared_by;
+			this.id = id;
+			this.links = links;
+		}
+	}
+
 	export let languageValue: string;
+	export let songs: Song[] = [];
 </script>
 
 <section class="section submitted_songs-section section-submitted_songs">
@@ -23,30 +57,20 @@
 			</p>
 		{/if}
 
-		<!-- SONGS WILL BE FILLED IN VIA JS -->
 		<div id="submitted_songs">
-			<div class="song">
-				<div class="details">
-					<h3 class="song-name">Instant Crush</h3>
-					<h3 class="song-artist">Daft Punk</h3>
+			{#each songs as song}
+				<div class="song {song.id}">
+					<div class="details">
+						<h3 class="song-name">{song.name}</h3>
+						<h3 class="song-artist">{song.artist}</h3>
+					</div>
+					<div class="actions">
+						<a href={song.url} target="_blank"
+							><button class="song-link button">Go to music</button></a
+						>
+					</div>
 				</div>
-				<div class="actions">
-					<a href="https://music.youtube.com/watch?v=khnokW3Mw24" target="_blank"
-						><button class="song-link button">Go to music</button></a
-					>
-				</div>
-			</div>
-			<div class="song">
-				<div class="details">
-					<h3 class="song-name">Wish you were here</h3>
-					<h3 class="song-artist">Pink Floyd</h3>
-				</div>
-				<div class="actions">
-					<a href="https://music.youtube.com/watch?v=hjpF8ukSrvk" target="_blank"
-						><button class="song-link button">Go to music</button></a
-					>
-				</div>
-			</div>
+			{/each}
 		</div>
 	</div>
 </section>

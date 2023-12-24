@@ -9,17 +9,13 @@
 	import Footer from '../lib/components/Footer.svelte';
 
 	let languageValue: string;
-	let nameValue: string;
 	let formIsFilledValue: boolean;
 
 	const unsubscribe = STATE.subscribe((data) => {
 		languageValue = data.language;
-		nameValue =
-			data.name.value.length > 0
-				? data.name.value
-				: data.name.default[languageValue as keyof typeof data.name.default];
 		formIsFilledValue = data.formIsFilled;
 	});
+	export let data;
 </script>
 
 <Navbar {languageValue} />
@@ -29,7 +25,7 @@
 {:else}
 	<Message {languageValue} />
 	<SongCTA {languageValue} />
-	<SubmittedSongs {languageValue} />
+	<SubmittedSongs languageValue={languageValue} songs={data.songs} />
 {/if}
 
 <Footer {languageValue} />
