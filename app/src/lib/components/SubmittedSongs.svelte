@@ -44,22 +44,22 @@
 				You can submit song of the year for you. You can see submissions of other people down below.
 			</p>
 			<p class="note">
-				If you have missed it, you can add it <a class="link" href="./submit_song-en.html"
-					>from here.</a
-				>
+				If you have missed it, you can add it <a class="link" href="/share-song"
+					>from here</a
+				>.
 			</p>
 		{:else}
 			<h1 class="heading">İlin seçilmiş mahnıları</h1>
 			<p>Sənin və bu sayta gələnlərin əlavə etdiyi mahnıları aşağıda görə bilərsən.</p>
 			<p class="note">
-				İndi görürsənsə, öz sevimli mahnını <a class="link" href="./submit_song-az.html">buradan</a>
+				İndi görürsənsə, öz sevimli mahnını <a class="link" href="/share-song">buradan</a>
 				əlavə edə bilərsən.
 			</p>
 		{/if}
 
 		<div id="submitted_songs">
 			{#each songs as song}
-				<div class="song {song.id}">
+				<div class="song {song.id}" id="song-{song.id}">
 					<div class="details">
 						<h3 class="song-name">{song.name}</h3>
 						<h3 class="song-artist">{song.artist}</h3>

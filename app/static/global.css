@@ -67,7 +67,6 @@ p {
 	color: var(--white-dimmed);
 }
 
-
 form {
 	margin-block: 2rem;
 	display: flex;
@@ -151,6 +150,13 @@ input:focus {
 	cursor: pointer;
 }
 
+.feedback {
+	display: none;
+	padding-top: 1rem;
+	font-size: 1.5rem;
+	color: var(-white);
+}
+
 @media screen and (max-width: 400px) {
 	a {
 		font-size: 1.5rem;
@@ -182,6 +188,13 @@ input:focus {
 		flex-direction: column;
 		align-items: center;
 		padding-block: 20vh;
+	}
+
+	.feedback {
+		display: none;
+		padding-top: 1rem;
+		font-size: 1.5rem;
+		color: var(-white);
 	}
 
 	.wrapper {

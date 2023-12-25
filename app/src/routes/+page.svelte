@@ -22,6 +22,7 @@
 
 {#if formIsFilledValue === false}
 	<WishForm {languageValue} />
+	<SubmittedSongs languageValue={languageValue} songs={data.songs} />
 {:else}
 	<Message {languageValue} />
 	<SongCTA {languageValue} />

@@ -104,19 +104,4 @@
 		display: block;
 		text-align: center;
 	}
-
-	@media screen and (max-width: 400px) {
-		.feedback {
-			display: none;
-			padding-top: 1rem;
-			font-size: 1.5rem;
-			color: var(-white);
-		}
-	}
-	.feedback {
-		display: none;
-		padding-top: 1rem;
-		font-size: 1.5rem;
-		color: var(-white);
-	}
 </style>
