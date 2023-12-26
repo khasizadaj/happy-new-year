@@ -3,10 +3,10 @@
 	export let languageValue: string;
 
 	const changeLanguage = (lang: string) => {
-		if (lang === "az") {
-			STATE.update((value) => ({ ...value, language: "az" }));
+		if (lang === 'az') {
+			STATE.update((value) => ({ ...value, language: 'az' }));
 		} else {
-			STATE.update((value) => ({ ...value, language: "en" }));
+			STATE.update((value) => ({ ...value, language: 'en' }));
 		}
 	};
 </script>
@@ -15,9 +15,13 @@
 	<div class="wrapper wrapper-navbar">
 		<div class="logo">
 			{#if languageValue === 'en'}
-				<h3>Letter from JAXA / 2023</h3>
+				<a href="/">
+					<h3>Letter from JAXA / 2023</h3>
+				</a>
 			{:else}
-				<h3>JAXA-dan Məktub / 2023</h3>
+				<a href="/">
+					<h3>JAXA-dan Məktub / 2023</h3>
+				</a>
 			{/if}
 		</div>
 		<div class="language">
@@ -49,7 +53,7 @@
 	.section-navbar > .wrapper {
 		margin: 0;
 	}
-	
+
 	.wrapper-navbar {
 		display: flex;
 		flex-direction: row;

@@ -32,6 +32,7 @@ body {
 a {
 	font-size: inherit;
 	text-decoration: none;
+	color: inherit;
 }
 
 h1 {
@@ -133,6 +134,12 @@ input:focus {
 	font-family: inherit;
 }
 
+.button-secondary {
+	background-color: transparent;
+	border: 2px solid var(--white-dimmed);
+	color: var(--white-dimmed);
+}
+
 .button-ghost {
 	background-color: transparent;
 	border: none;
@@ -157,12 +164,25 @@ input:focus {
 	color: var(-white);
 }
 
+.mt-1 {
+	margin-top: 1rem;
+}
+
+.mt-2 {
+	margin-top: 1.5rem;
+}
+
+.mb-1 {
+	margin-bottom: 1rem;
+}
+
+.mb-2 {
+	margin-bottom: 1.5rem;
+}
+
 @media screen and (max-width: 400px) {
 	a {
 		font-size: 1.5rem;
-		margin-right: 1rem;
-		text-decoration: none;
-		color: var(--yellow);
 	}
 
 	a:hover {
@@ -171,16 +191,20 @@ input:focus {
 	}
 
 	h1 {
-		font-size: 3rem;
-		font-weight: 600;
+		font-size: 2.4rem;
 		padding-block: 1rem 0.5rem;
-		border-bottom: 2px solid var(--white-dimmed);
-		margin-bottom: 2rem;
+	}
+
+	h3 {
+		font-size: 1.8rem;
+	}
+
+	h4 {
+		font-size: 1.6rem;
 	}
 
 	p {
-		font-size: 2rem;
-		margin-bottom: 1rem;
+		font-size: 1.6rem;
 	}
 
 	.section {
@@ -188,13 +212,6 @@ input:focus {
 		flex-direction: column;
 		align-items: center;
 		padding-block: 20vh;
-	}
-
-	.feedback {
-		display: none;
-		padding-top: 1rem;
-		font-size: 1.5rem;
-		color: var(-white);
 	}
 
 	.wrapper {
@@ -205,15 +222,25 @@ input:focus {
 	label {
 		display: block;
 		margin-bottom: 0.8rem;
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 	}
 
 	input {
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 	}
 
 	.button {
 		font-size: 1.6rem;
 		padding: 0.8rem;
+	}
+
+	@media screen and (max-width: 400px) {
+		.section {
+			padding-block: initial;
+		}
+
+		.wrapper {
+			width: 90%;
+		}
 	}
 }

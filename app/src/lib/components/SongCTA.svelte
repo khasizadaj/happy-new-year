@@ -51,7 +51,7 @@
 	.cta {
 		border: 2px solid var(--white-dimmed);
 		border-radius: 8px;
-		margin-block-start: 4rem;
+		margin-block: 4rem;
 		padding: 2rem;
 		display: flex;
 		flex-direction: column;

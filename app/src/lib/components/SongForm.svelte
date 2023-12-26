@@ -31,10 +31,6 @@
 		}
 
 		if (formData.get('name') && formData.get('artist') && formData.get('link')) {
-			console.log(formData.get('name'));
-			console.log(formData.get('artist'));
-
-			console.log(formData.get('link'));
 			const res = await fetch(form.action, {
 				method: form.method,
 				body: formData
@@ -43,7 +39,6 @@
 			if (res.ok) {
 				const result = await res.json();
 				const data = JSON.parse(JSON.parse(result.data)[0]);
-				console.log(data);
 				console.log(data.createdSong);
 				goto(`/#song-${data.createdSong.id}`);
 			} else {
@@ -91,6 +86,7 @@
 					<small class="feedback feedback-song_link"> You forgot to add link to the song. </small>
 				</div>
                 <button type="submit" class="button button-wide">Share song</button>
+                <button on:click={() => goto('/#submitted_songs')} class="button button-wide button-secondary mt-2">Go back</button>
 			</form>
 		{:else }
 		<h1>Mahnı haqqında məlumatlar</h1>
@@ -121,6 +117,7 @@
 				</small>
 			</div>
 			<button type="submit" class="button button-wide">Mahnı əlavə et</button>
+			<button on:click={() => goto('/#submitted_songs')} class="button button-wide button-secondary mt-2">Geri</button>
 		</form>
 		{/if}
 	</div>

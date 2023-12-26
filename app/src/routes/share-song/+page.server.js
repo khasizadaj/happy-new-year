@@ -1,25 +1,7 @@
 import { API_KEY, API_USERNAME } from '$env/static/private';
 
-export function load({ cookies }) {
-	let songAdded = cookies.get('songAdded');
-	console.log(songAdded);
-	if (!songAdded) {
-		cookies.set('songAdded', "0", { path: '/share-song' });
-	} else {
-		if (songAdded == "1")
-		{
-			cookies.set("songAdded", "0", { path: '/share-song' })
-			return ;
-		}
-	}
-
-	return {
-		songAdded: songAdded
-	};
-}
-
 export const actions = {
-	default: async ({ cookies, request }) => {
+	default: async ({ request }) => {
 		let username = API_USERNAME;
 		let password = API_KEY;
 		const formData = request.formData();

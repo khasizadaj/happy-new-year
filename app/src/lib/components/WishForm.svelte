@@ -93,7 +93,7 @@
 <style>
 	.section-form {
 		padding-block: 5rem;
-		height: 80vh;
+		height: 90vh;
 		min-height: 500px;
 		display: flex;
 	}

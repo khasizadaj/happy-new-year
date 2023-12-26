@@ -36,7 +36,7 @@
 	export let songs: Song[] = [];
 </script>
 
-<section class="section submitted_songs-section section-submitted_songs">
+<section class="section submitted_songs-section section-submitted_songs" id="submitted_songs">
 	<div class="wrapper submitted_songs-wrapper">
 		{#if languageValue == 'en'}
 			<h1 class="heading">Songs of the year (by you!)</h1>
@@ -44,10 +44,21 @@
 				You can submit song of the year for you. You can see submissions of other people down below.
 			</p>
 			<p class="note">
-				If you have missed it, you can add it <a class="link" href="/share-song"
-					>from here</a
-				>.
+				If you have missed it, you can add it <a class="link" href="/share-song">from here</a>.
 			</p>
+			<div>
+				{#each songs as song}
+					<div class="song {song.id}" id="song-{song.id}">
+						<div class="details">
+							<h3>"{song.name}" <span class="note">by</span> {song.artist}</h3>
+						</div>
+						<div class="actions">
+							<a href={song.url} target="_blank"><button class="song-link button">Listen</button></a
+							>
+						</div>
+					</div>
+				{/each}
+			</div>
 		{:else}
 			<h1 class="heading">İlin seçilmiş mahnıları</h1>
 			<p>Sənin və bu sayta gələnlərin əlavə etdiyi mahnıları aşağıda görə bilərsən.</p>
@@ -55,29 +66,28 @@
 				İndi görürsənsə, öz sevimli mahnını <a class="link" href="/share-song">buradan</a>
 				əlavə edə bilərsən.
 			</p>
+			<div>
+				{#each songs as song}
+					<div class="song {song.id}" id="song-{song.id}">
+						<div class="details">
+							<h3>"{song.name}" <span class="note">,</span> {song.artist}</h3>
+						</div>
+						<div class="actions">
+							<a href={song.url} target="_blank"><button class="song-link button">Dinlə</button></a
+							>
+						</div>
+					</div>
+				{/each}
+			</div>
 		{/if}
-
-		<div id="submitted_songs">
-			{#each songs as song}
-				<div class="song {song.id}" id="song-{song.id}">
-					<div class="details">
-						<h3 class="song-name">{song.name}</h3>
-						<h3 class="song-artist">{song.artist}</h3>
-					</div>
-					<div class="actions">
-						<a href={song.url} target="_blank"
-							><button class="song-link button">Go to music</button></a
-						>
-					</div>
-				</div>
-			{/each}
-		</div>
 	</div>
 </section>
 
 <style>
+	h3 {
+		border: none;
+	}
 	.submitted_songs-section {
-		padding-block-start: 10vh;
 		min-height: 400px;
 	}
 
@@ -87,7 +97,7 @@
 
 	.song {
 		display: flex;
-		flex-direction: row;
+		gap: 0;
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
@@ -97,19 +107,16 @@
 		min-height: 60px;
 	}
 
-	.song-name {
+	.details {
 		margin-right: 1rem;
-		border: none;
 	}
 
-	.song-artist {
-		border: none;
-		padding: 0;
+	.button {
+		max-width: 200px;
+		padding: 1rem 2rem;
+		min-width: 80px;
 	}
 
-	.song-artist::before {
-		content: 'by';
-		margin-right: 1rem;
-		color: var(--white-dimmed);
+	@media screen and (max-width: 400px) {
 	}
 </style>
