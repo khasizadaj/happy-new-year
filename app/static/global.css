@@ -211,4 +211,14 @@ input:focus {
 		font-size: 1.6rem;
 		padding: 0.8rem;
 	}
+
+	@media screen and (max-width: 400px) {
+		.section {
+			padding-block: initial;
+		}
+
+		.wrapper {
+			width: 90%;
+		}
+	}
 }

@@ -46,6 +46,19 @@
 			<p class="note">
 				If you have missed it, you can add it <a class="link" href="/share-song">from here</a>.
 			</p>
+			<div id="submitted_songs">
+				{#each songs as song}
+					<div class="song {song.id}" id="song-{song.id}">
+						<div class="details">
+							<h3>"{song.name}" <span class="note">by</span> {song.artist}</h3>
+						</div>
+						<div class="actions">
+							<a href={song.url} target="_blank"><button class="song-link button">Listen</button></a
+							>
+						</div>
+					</div>
+				{/each}
+			</div>
 		{:else}
 			<h1 class="heading">İlin seçilmiş mahnıları</h1>
 			<p>Sənin və bu sayta gələnlərin əlavə etdiyi mahnıları aşağıda görə bilərsən.</p>
@@ -53,20 +66,20 @@
 				İndi görürsənsə, öz sevimli mahnını <a class="link" href="/share-song">buradan</a>
 				əlavə edə bilərsən.
 			</p>
+			<div id="submitted_songs">
+				{#each songs as song}
+					<div class="song {song.id}" id="song-{song.id}">
+						<div class="details">
+							<h3>"{song.name}" <span class="note">,</span> {song.artist}</h3>
+						</div>
+						<div class="actions">
+							<a href={song.url} target="_blank"><button class="song-link button">Dinlə</button></a
+							>
+						</div>
+					</div>
+				{/each}
+			</div>
 		{/if}
-
-		<div id="submitted_songs">
-			{#each songs as song}
-				<div class="song {song.id}" id="song-{song.id}">
-					<div class="details">
-						<h3>"{song.name}" <span class="note">by</span> {song.artist}</h3>
-					</div>
-					<div class="actions">
-						<a href={song.url} target="_blank"><button class="song-link button">Listen</button></a>
-					</div>
-				</div>
-			{/each}
-		</div>
 	</div>
 </section>
 
@@ -75,7 +88,6 @@
 		border: none;
 	}
 	.submitted_songs-section {
-		padding-block-start: 10vh;
 		min-height: 400px;
 	}
 
@@ -105,5 +117,6 @@
 		min-width: 80px;
 	}
 
-	@media screen and (max-width: 400px) {}
+	@media screen and (max-width: 400px) {
+	}
 </style>
