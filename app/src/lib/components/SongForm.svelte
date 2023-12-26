@@ -91,6 +91,7 @@
 					<small class="feedback feedback-song_link"> You forgot to add link to the song. </small>
 				</div>
                 <button type="submit" class="button button-wide">Share song</button>
+                <button on:click={() => goto('/#submitted_songs')} class="button button-wide button-secondary mt-2">Go back</button>
 			</form>
 		{:else }
 		<h1>Mahnı haqqında məlumatlar</h1>
@@ -121,6 +122,7 @@
 				</small>
 			</div>
 			<button type="submit" class="button button-wide">Mahnı əlavə et</button>
+			<button on:click={() => goto('/#submitted_songs')} class="button button-wide button-secondary mt-2">Geri</button>
 		</form>
 		{/if}
 	</div>

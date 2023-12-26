@@ -36,7 +36,7 @@
 	export let songs: Song[] = [];
 </script>
 
-<section class="section submitted_songs-section section-submitted_songs">
+<section class="section submitted_songs-section section-submitted_songs" id="submitted_songs">
 	<div class="wrapper submitted_songs-wrapper">
 		{#if languageValue == 'en'}
 			<h1 class="heading">Songs of the year (by you!)</h1>
@@ -46,7 +46,7 @@
 			<p class="note">
 				If you have missed it, you can add it <a class="link" href="/share-song">from here</a>.
 			</p>
-			<div id="submitted_songs">
+			<div>
 				{#each songs as song}
 					<div class="song {song.id}" id="song-{song.id}">
 						<div class="details">
@@ -66,7 +66,7 @@
 				İndi görürsənsə, öz sevimli mahnını <a class="link" href="/share-song">buradan</a>
 				əlavə edə bilərsən.
 			</p>
-			<div id="submitted_songs">
+			<div>
 				{#each songs as song}
 					<div class="song {song.id}" id="song-{song.id}">
 						<div class="details">
