@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600&display=swap');
+
+:root {
+	--red: #b10015;
+	--red-dimmed: rgba(177, 0, 21, 0.7);
+	--red-darker: rgb(99, 11, 21);
+	--white: #e6efec;
+	--white-dimmed: rgba(230, 239, 236, 0.8);
+	--yellow: #edc85e;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Dosis', 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+	font-weight: 500;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	color: var(--white);
+}
+
+body {
+	overflow-x: hidden;
+	width: 100%;
+	background-color: var(--red);
+}
+
+a {
+	font-size: inherit;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: 600;
+	padding-block: 1rem 0.5rem;
+	border-bottom: 2px solid var(--white-dimmed);
+	margin-bottom: 2rem;
+}
+
+h3 {
+	display: inline-block;
+	font-size: 2rem;
+	font-weight: 600;
+	padding-block: 0.5rem;
+	border-bottom: 2px solid var(--white-dimmed);
+}
+
+h4 {
+	display: inline-block;
+	font-size: 1.5rem;
+	font-weight: 500;
+	padding-block: 0.5rem;
+	border-bottom: 2px solid var(--white-dimmed);
+}
+
+p {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.note {
+	color: var(--white-dimmed);
+}
+
+form {
+	margin-block: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	font-weight: inherit;
+	font-family: inherit;
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-block: 0;
+}
+
+.wrapper {
+	max-width: 600px;
+	width: 80%;
+}
+
+label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-size: 2rem;
+	color: var(--white);
+}
+
+.input-wrapper {
+	margin-bottom: 1.5rem;
+	width: 100%;
+}
+
+input {
+	font-size: 2rem;
+	padding: 1rem;
+	width: 100%;
+	background-color: transparent;
+	border: 2px solid var(--white-dimmed);
+	color: var(--white);
+	border-radius: 4px;
+}
+
+input:focus {
+	outline: none;
+	background-color: rgba(67, 67, 67, 0.12);
+}
+
+.button {
+	background-color: var(--white);
+	font-weight: 700;
+	border: none;
+	border-radius: 4px;
+	font-size: 1.8rem;
+	padding: 1rem;
+	color: var(--red);
+	font-family: inherit;
+}
+
+.button-ghost {
+	background-color: transparent;
+	border: none;
+	padding: 1rem;
+	color: var(--white);
+}
+
+.button-wide {
+	width: 100%;
+}
+
+.link {
+	text-decoration: underline;
+	color: var(--yellow);
+	cursor: pointer;
+}
+
+.feedback {
+	display: none;
+	padding-top: 1rem;
+	font-size: 1.5rem;
+	color: var(-white);
+}
+
+@media screen and (max-width: 400px) {
+	a {
+		font-size: 1.5rem;
+		margin-right: 1rem;
+		text-decoration: none;
+		color: var(--yellow);
+	}
+
+	a:hover {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	h1 {
+		font-size: 3rem;
+		font-weight: 600;
+		padding-block: 1rem 0.5rem;
+		border-bottom: 2px solid var(--white-dimmed);
+		margin-bottom: 2rem;
+	}
+
+	p {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-block: 20vh;
+	}
+
+	.feedback {
+		display: none;
+		padding-top: 1rem;
+		font-size: 1.5rem;
+		color: var(-white);
+	}
+
+	.wrapper {
+		max-width: 500px;
+		width: 80%;
+	}
+
+	label {
+		display: block;
+		margin-bottom: 0.8rem;
+		font-size: 1.8rem;
+	}
+
+	input {
+		font-size: 1.8rem;
+	}
+
+	.button {
+		font-size: 1.6rem;
+		padding: 0.8rem;
+	}
+}
