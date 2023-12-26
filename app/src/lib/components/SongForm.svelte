@@ -31,10 +31,6 @@
 		}
 
 		if (formData.get('name') && formData.get('artist') && formData.get('link')) {
-			console.log(formData.get('name'));
-			console.log(formData.get('artist'));
-
-			console.log(formData.get('link'));
 			const res = await fetch(form.action, {
 				method: form.method,
 				body: formData
@@ -43,7 +39,6 @@
 			if (res.ok) {
 				const result = await res.json();
 				const data = JSON.parse(JSON.parse(result.data)[0]);
-				console.log(data);
 				console.log(data.createdSong);
 				goto(`/#song-${data.createdSong.id}`);
 			} else {
