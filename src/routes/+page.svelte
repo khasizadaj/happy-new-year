@@ -156,7 +156,7 @@
 
 		50% {
 			background: rgba(0, 247, 165, 0.4);
-			box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 247, 165, 0.2);
+			box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 247, 165, 0.1);
 		}
 	}
 
@@ -169,7 +169,7 @@
 
 		50% {
 			background: rgba(0, 247, 165, 0.4);
-			box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 247, 165, 0.2);
+			box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 247, 165, 0.1);
 		}
 	}
 
@@ -182,7 +182,7 @@
 
 		50% {
 			background: rgba(0, 255, 255, 0.4);
-			box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.2);
+			box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.1);
 		}
 	}
 
@@ -195,7 +195,7 @@
 
 		50% {
 			background: rgba(0, 255, 255, 0.4);
-			box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.2);
+			box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.1);
 		}
 	}
 
@@ -208,7 +208,7 @@
 
 		50% {
 			background: rgba(255, 215, 0, 0.4);
-			box-shadow: 0px 4.6666666667px 24px 3px rgba(255, 215, 0, 0.2);
+			box-shadow: 0px 4.6666666667px 24px 3px rgba(255, 215, 0, 0.1);
 		}
 	}
 
@@ -221,7 +221,7 @@
 
 		50% {
 			background: rgba(255, 215, 0, 0.4);
-			box-shadow: 0px 4.6666666667px 24px 3px rgba(255, 215, 0, 0.2);
+			box-shadow: 0px 4.6666666667px 24px 3px rgba(255, 215, 0, 0.1);
 		}
 	}
 
