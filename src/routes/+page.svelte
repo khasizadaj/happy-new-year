@@ -4,6 +4,7 @@
 	import Message from '$lib/components/Message.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import SongCTA from '$lib/components/SongCTA.svelte';
+	import DecoMyTreeCTA from '$lib/components/DecoMyTreeCTA.svelte';
 	import SubmittedSongs from '$lib/components/SubmittedSongs.svelte';
 	import WishForm from '$lib/components/WishForm.svelte';
 	import Footer from '../lib/components/Footer.svelte';
@@ -36,8 +37,9 @@
 	<SubmittedSongs {languageValue} songs={data.songs} />
 {:else}
 	<Message {languageValue} />
-	<SongCTA {languageValue} />
+	<DecoMyTreeCTA {languageValue} />
 	<SubmittedSongs {languageValue} songs={data.songs} />
+	<SongCTA {languageValue} />
 {/if}
 
 <Footer {languageValue} />
