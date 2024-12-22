@@ -47,13 +47,13 @@
 				adamların olmasını arzu edirəm.
 			</p>
 			<p>
-				Bu il üçün (keçən ildə olduğu kimi) sənə arzu edirəm ki, ətrafdakıların təsiri olan olan
-				yox, məhz öz istədiyin arzuların və hədəflərin dalınca qaçasan. Ən əsası doğru və məhz sənə
+				Bu il üçün (keçən ildə olduğu kimi) sənə arzu edirəm ki, ətrafdakıların təsiri olan
+				yox, məhz öz istədiyin arzuların və hədəflərin üçün çalışasan. Ən əsası doğru və məhz sənə
 				uyğun olanlarının arxasınca.
 			</p>
 			<p>
-				2022-də öyrəndiyim ən bpyük bacarıqlaından biri insanlarla daha yaxşı kommunikasiya qurmaq
-				olub və ümid edirəm ki, bu bacarığa sahib olan insanlarla dolu olsun həyatın.
+				2022-də öyrəndiyim ən böyük bacarıqlarımdan biri insanlarla daha yaxşı kommunikasiya qurmaq
+				olub. Ümid edirəm ki, qarşıdan gələn ildə həyatın bu bacarığa sahib olan insanlarla dolu olar.
 			</p>
 			<p>Yeni ilin mübarək. Sevilirsən!</p>
 			<br />
