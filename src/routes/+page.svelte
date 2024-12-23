@@ -6,6 +6,7 @@
 	import DecoMyTreeCTA from '$lib/components/DecoMyTreeCTA.svelte';
 	import SubmittedSongs from '$lib/components/SubmittedSongs.svelte';
 	import WishForm from '$lib/components/WishForm.svelte';
+	import MusicPlayer from '$lib/components/MusicPlayer.svelte';
 
 	let languageValue: string;
 	let formIsFilledValue: boolean;
@@ -26,3 +27,5 @@
 	<SubmittedSongs {languageValue} songs={data.songs} />
 	<SongCTA {languageValue} />
 {/if}
+
+<MusicPlayer {languageValue} />

@@ -27,6 +27,7 @@ body {
 	overflow-x: hidden;
 	width: 100%;
 	background-color: var(--red);
+	cursor: url("/src/lib/icons/cursor-pointer.png"), auto;
 }
 
 a {
@@ -81,6 +82,7 @@ button {
 	background-color: transparent;
 	font-weight: inherit;
 	font-family: inherit;
+	cursor: url("/src/lib/icons/cursor-pointer-clickable.png"), pointer;
 }
 
 .section {
@@ -132,6 +134,7 @@ input:focus {
 	padding: 1rem;
 	color: var(--red);
 	font-family: inherit;
+	cursor: url("/src/lib/icons/cursor-pointer-clickable.png"), pointer;
 }
 
 .button-secondary {
@@ -154,7 +157,6 @@ input:focus {
 .link {
 	text-decoration: underline;
 	color: var(--yellow);
-	cursor: pointer;
 }
 
 .feedback {
@@ -222,11 +224,11 @@ input:focus {
 @media screen and (max-width: 400px) {
 	a {
 		font-size: 1.5rem;
+		cursor: url("/src/lib/icons/cursor-pointer-clickable.png"), pointer;
 	}
 
 	a:hover {
 		text-decoration: underline;
-		cursor: pointer;
 	}
 
 	h1 {

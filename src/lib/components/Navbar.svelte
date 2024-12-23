@@ -78,7 +78,6 @@
 		height: inherit;
 		color: var(--white-dimmed);
 		margin: -1px;
-		cursor: pointer;
 	}
 
 	.language-option.active {
