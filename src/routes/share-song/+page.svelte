@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { STATE } from '$lib/stores.js';
 
-	import Footer from '$lib/components/Footer.svelte';
-	import Navbar from '$lib/components/Navbar.svelte';
 	import SongForm from '$lib/components/SongForm.svelte';
 
 	let languageValue: string;
@@ -14,7 +12,4 @@
 	});
 </script>
 
-<Navbar {languageValue} />
 <SongForm {languageValue} />
-
-<Footer {languageValue} />
