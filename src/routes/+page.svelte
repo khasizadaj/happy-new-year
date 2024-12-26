@@ -28,4 +28,4 @@
 	<SongCTA {languageValue} />
 {/if}
 
-<!-- <MusicPlayer {languageValue} /> -->
+<MusicPlayer {languageValue} />
