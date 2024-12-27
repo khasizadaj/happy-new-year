@@ -17,7 +17,7 @@
 		{#if languageValue == 'en'}
 			<h1>Happy New Year, {nameValue}!!!</h1>
 			<p>
-				I'm glad I found time to work on this project again this year. Not sure if she'll read this,
+				<span class="note">Note:</span> I'm glad I found time to work on this project again this year. Not sure if she'll read this,
 				but I'm grateful she reminded me about it. Between work and personal matters, I had
 				completely forgotten.
 			</p>
@@ -87,6 +87,10 @@
 
 	.signature {
 		font-style: italic;
+	}
+
+	p {
+		text-align: justify;
 	}
 	
 	b {
