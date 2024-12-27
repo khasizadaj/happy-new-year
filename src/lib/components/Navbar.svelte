@@ -16,11 +16,11 @@
 		<div class="logo">
 			{#if languageValue === 'en'}
 				<a href="/">
-					<h3>Letter from JAXA / 2023</h3>
+					<h3>Letter from JAXA / 2024</h3>
 				</a>
 			{:else}
 				<a href="/">
-					<h3>JAXA-dan Məktub / 2023</h3>
+					<h3>JAXA-dan Məktub / 2024</h3>
 				</a>
 			{/if}
 		</div>
