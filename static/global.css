@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap');
 
 :root {
 	--red: #b10015;
@@ -62,7 +62,7 @@ h4 {
 
 p {
 	font-size: 2rem;
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 }
 
 .note {
