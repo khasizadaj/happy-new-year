@@ -17,9 +17,9 @@
 		{#if languageValue == 'en'}
 			<h1>Happy New Year, {nameValue}!!!</h1>
 			<p>
-				<span class="note">Note:</span> I'm glad I found time to work on this project again this year. Not sure if she'll read this,
-				but I'm grateful she reminded me about it. Between work and personal matters, I had
-				completely forgotten.
+				<span class="note">Note:</span> I'm glad I found time to work on this project again this year.
+				Not sure if she'll read this, but I'm grateful she reminded me about it. Between work and personal
+				matters, I had completely forgotten.
 			</p>
 			<p>
 				This time of year always feels bittersweet. It's probably the only time I slow down to
@@ -48,31 +48,39 @@
 
 			<p><span class="signature">Javid "JAXA" Khasizada.</span></p>
 		{:else}
-			<h1>Təbriklər, {nameValue}!!!</h1>
+			<h1>Yeni ilin mübarək, {nameValue}!!!</h1>
 
 			<p>
-				<span class="note">Qeyd:</span> Bu mesaj əvvəldən yazılıb deyə hamıya sən deyə müraciət edəcəm.
+				<span class="note">Qeyd:</span> Bu il yenidən bu layihə üzərində işləmək üçün vaxt tapdığım üçün
+				şadam. Bunu onun da oxuyub-oxumayacağından əmin deyiləm, amma bu barədə mənə xatırlatdığı üçün
+				ona minnətdaram.
 			</p>
+			<p>
+				İlin bu vaxtı həmişə qəribə hisslər oyadır. Yəqin ki, bu, keçən ilə nəzər salıb, növbəti ili
+				necə daha yaxşı etmək barədə düşündüyüm yeganə vaxtdır. Bu, çox da yaxşı bir vərdiş deyil,
+				amma ümid edirəm ki, bunu edən tək mənəm. 🤞
+			</p>
+			<p>
+				Keçmişə baxanda aydın olur ki, ətrafımızdakı insanlar həyatımızın ən vacib hissəsidir. Onlar
+				olmasa, xatirələrimiz də mənasız olar. Səninlə maraqlanan insanlara vaxt ayır. Onların
+				yanında ol—istədiyin üçün, yoxsa məcburiyyətə görə yox. Əgər belə insanların olmadığını
+				düşünürsənsə, sadəcə ətrafa diqqətlə bax—onlar çox güman ki, gözləyirlər ki, sən onları fərq
+				edəsən. :)
+			</p>
+			<p>
+				Vacib olan odur ki, gələn ildə daha çox xoş anlar yaratmağa çalışaq, ətrafımızdakılara dəyər
+				verək və kiçik uğurları belə qeyd edək.
+			</p>
+			<p>
+				Belə! Zövq al, gözəl xatirələr yarat və həm sahib olduqlarının, həm də olmadıqlarının qədrini
+				bil. Bir də, mənim kimi olma — <b>sosial mediada daha az vaxt keçir</b>!
+			</p>
+			<p>
+				<b>Yeni ilin mübarək!</b> Sevilirsən — bəlkə şəxsən mən tərəfindən yox, mütləq kimsə tərəfindən!
+			</p>
+			<p>Macarıstandan ürək dolusu salamlarla,</p>
 			<br />
-			<p>
-				Sənə yeni ildə ətrafında səni anlayan və səni zaman və şəraitdən asılı olmayaraq dəstəkləyən
-				adamların olmasını arzu edirəm.
-			</p>
-			<p>
-				Bu il üçün (keçən ildə olduğu kimi) sənə arzu edirəm ki, ətrafdakıların təsiri olan yox,
-				məhz öz istədiyin arzuların və hədəflərin üçün çalışasan. Ən əsası doğru və məhz sənə uyğun
-				olanlarının arxasınca.
-			</p>
-			<p>
-				2022-də öyrəndiyim ən böyük bacarıqlarımdan biri insanlarla daha yaxşı kommunikasiya qurmaq
-				olub. Ümid edirəm ki, qarşıdan gələn ildə həyatın bu bacarığa sahib olan insanlarla dolu
-				olar.
-			</p>
-			<p>Yeni ilin mübarək. Sevilirsən!</p>
-			<br />
-			<p>
-				Macarıstandan ürək dolusu salamlarla, <span class="signature">Cavid "JAXA" Xasizadə.</span>
-			</p>
+			<p><span class="signature">Cavid "JAXA" Xasizadə.</span></p>
 		{/if}
 	</div>
 </section>
@@ -92,7 +100,7 @@
 	p {
 		text-align: justify;
 	}
-	
+
 	b {
 		font-weight: 700;
 	}
