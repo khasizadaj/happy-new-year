@@ -78,9 +78,8 @@
 			{/each}
 		</div>
 		<div class="pagination">
-			<button
-				class="button button-secondary"
-				on:click={() => updatePagination('previous')}>{'<'}</button
+			<button class="button button-secondary" on:click={() => updatePagination('previous')}
+				>{'<'}</button
 			>
 			{#if languageValue == 'en'}
 				<p>Page {currentPage} of {Math.ceil(count / perPage)}</p>
@@ -140,6 +139,7 @@
 	}
 	.pagination > .button {
 		padding: 1rem;
+		padding-bottom: 1.4rem;
 		min-width: 5rem;
 	}
 
