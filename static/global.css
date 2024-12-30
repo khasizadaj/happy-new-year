@@ -6,6 +6,7 @@
 	--red-darker: rgb(99, 11, 21);
 	--white: #e6efec;
 	--white-dimmed: rgba(230, 239, 236, 0.8);
+	--white-hover: rgba(230, 239, 236, 0.3);
 	--yellow: #edc85e;
 }
 
@@ -137,10 +138,23 @@ input:focus {
 	cursor: url("/icons/cursor-pointer-clickable.png"), pointer;
 }
 
+.button-sm {
+	font-weight: 700;
+	border-radius: 4px;
+	font-size: 1.6rem;
+	padding: 0.5rem;
+	font-family: inherit;
+}
+
 .button-secondary {
 	background-color: transparent;
 	border: 2px solid var(--white-dimmed);
 	color: var(--white-dimmed);
+}
+
+.button-secondary:hover {
+	color: var(--white);
+	background-color: var(--white-hover);
 }
 
 .button-ghost {
