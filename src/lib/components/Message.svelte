@@ -88,7 +88,6 @@
 <style>
 	.section-message {
 		padding-block: 5rem;
-		height: 90vh;
 		min-height: 500px;
 		display: flex;
 	}
