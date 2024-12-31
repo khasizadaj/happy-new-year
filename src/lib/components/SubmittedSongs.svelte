@@ -58,25 +58,47 @@
 
 <section class="section submitted_songs-section section-submitted_songs mb-5" id="submitted_songs">
 	<div class="wrapper submitted_songs-wrapper">
-		<h1 class="heading">Songs of the year (by you!)</h1>
-		<p>
-			You can submit song of the year for you. You can see submissions of other people down below.
-		</p>
-		<p class="note">
-			If you have missed it, you can add it <a class="link" href="/share-song">from here</a>.
-		</p>
-		<div class="mt-4 mb-4">
-			{#each shortSongs as song}
-				<div class="song {song.id}" id="song-{song.id}">
-					<div class="details">
-						<h3>"{song.name}" <span class="note">by</span> {song.artist}</h3>
+		{#if languageValue == 'en'}
+			<h1 class="heading">Songs of the year (by you!)</h1>
+			<p>
+				You can submit song of the year for you. You can see submissions of other people down below.
+			</p>
+			<p class="note">
+				If you have missed it, you can add it <a class="link" href="/share-song">from here</a>.
+			</p>
+			<div class="mt-4 mb-4">
+				{#each shortSongs as song}
+					<div class="song {song.id}" id="song-{song.id}">
+						<div class="details">
+							<h3>"{song.name}" <span class="note">by</span> {song.artist}</h3>
+						</div>
+						<div class="actions">
+							<a href={song.url} target="_blank"><button class="song-link button">Listen</button></a
+							>
+						</div>
 					</div>
-					<div class="actions">
-						<a href={song.url} target="_blank"><button class="song-link button">Listen</button></a>
+				{/each}
+			</div>
+		{:else}
+			<h1 class="heading">İlin seçilmiş mahnıları</h1>
+			<p>Sənin və bu sayta gələnlərin əlavə etdiyi mahnıları aşağıda görə bilərsən.</p>
+			<p class="note">
+				İndi görürsənsə, öz sevimli mahnını <a class="link" href="/share-song">buradan</a>
+				əlavə edə bilərsən.
+			</p>
+			<div class="mt-4 mb-4">
+				{#each shortSongs as song}
+					<div class="song {song.id}" id="song-{song.id}">
+						<div class="details">
+							<h3>"{song.name}" <span class="note">,</span> {song.artist}</h3>
+						</div>
+						<div class="actions">
+							<a href={song.url} target="_blank"><button class="song-link button">Dinlə</button></a>
+						</div>
 					</div>
-				</div>
-			{/each}
-		</div>
+				{/each}
+			</div>
+		{/if}
 		<div class="pagination">
 			<button class="button button-secondary" on:click={() => updatePagination('previous')}
 				>{'<'}</button
